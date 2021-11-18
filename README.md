@@ -25,7 +25,7 @@
 
     yarn
 
-<p> Para a criação do Base de dados em Sqlite execute o comando.</p>
+<p> Para a criação da Base de dados em Sqlite execute o comando.</p>
 
     yarn prisma migrate dev
 
@@ -49,7 +49,7 @@ e depois
 - [ ] Os principios do SOLID
 - [ ] Multer
 - [ ] momentjs
-- [ ] Swagger / para documentação da API
+- [ ] Swagger / Para documentação da API e teste em browse dos recursos.
 - [ ] Prisma.io / ORM e gerenciador dos dados (SQlite, Postgres, Mysql, MongoDB)
 
 ### Features
@@ -64,13 +64,17 @@ e depois
 
     http://localhost.3333/cdi
 
-## /import - Recurso para cadastro manual da CDI.
+## /import - Recurso para importação da Lista Histórica de CDI e cadastro automatico na Banco de dados.
 
     http://localhost.3333/import
 
 ## /cdb - Recurso para calculo do CDB.
 
     http://localhost.3333/calculator
+
+## /docs - Recurso para a documentação e teste dos recursos em browse.
+
+    http://localhost.3333/api-docs
 
 ### Licença
 

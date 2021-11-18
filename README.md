@@ -33,7 +33,7 @@
 
     yarn dev
 
-<p> Para o executar o programa em modo de Produção execute a linha abaixo.</p>
+<p> Para o executar o programa em modo de Produção crie a pasta .dist na raiz do projeto, e depois execute o comando abaixo.</p>
 
     yarn tsc
 

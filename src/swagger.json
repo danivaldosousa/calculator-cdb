@@ -1,0 +1,127 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Calculator CDB Documentation API",
+    "description": "This is an API that calculates the CDB corresponds to the period informed. ",
+    "version": "1.0.0",
+    "contact": {
+      "email": "danivaldo@gmail.com"
+    }
+  },
+  "paths": {
+    "/cdi": {
+      "post": {
+        "tags": ["CDB - CDI"],
+        "summary": "Creates a manual of a CDI",
+        "description": "Creates a manual release of a CDI if needed. ",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "ssecurityname": {
+                    "type": "string"
+                  },
+                  "dtdate": {
+                    "type": "string"
+                  },
+                  "lasttradeprice": {
+                    "type": "number"
+                  }
+                },
+                "example": {
+                  "ssecurityname": "CDI",
+                  "dtdate": "2021-10-01",
+                  "dlasttradeprice": 13.9
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "400": {
+            "description": "Error"
+          }
+        }
+      }
+    },
+    "/cdb": {
+      "get": {
+        "tags": ["Calculator"],
+        "summary": "Calculator of CDB",
+        "description": "Calculation of CDB on investment date",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "nvestmentDate": {
+                    "type": "string"
+                  },
+                  "cdbRate": {
+                    "type": "number"
+                  },
+                  "currentDate": {
+                    "type": "string"
+                  }
+                },
+                "example": {
+                  "nvestmentDate": "2021-10-01",
+                  "cdbRate": 103.5,
+                  "dcurrentDate": "2021-10-01"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "date": {
+                        "type": "string"
+                      },
+                      "uniPrice": {
+                        "type": "number"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Error"
+          }
+        }
+      }
+    },
+    "/import": {
+      "post": {
+        "tags": ["Upload"],
+        "summary": "Upload file csv",
+        "description": "Import file csv with CDI History",
+        "requestBody": {
+          "content": {
+            "application/octet-stream": {
+              "schema": {
+                "type": "string",
+                "format": "binary"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

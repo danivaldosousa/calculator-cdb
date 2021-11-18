@@ -22,9 +22,8 @@
 <p> Faça o download do projeto para sua maquina via terminal com git clone https://github.com/danivaldosousa/calculator-cdb.git </p>
 
 <p> Depois de baixado, acesse a pasta do projeto e rode o comando abaixo no terminal de sua maquina, e será instalado todas dependências do projeto.</p>
-     yarn
-ou
-    npm install
+
+    yarn
 
 <p> Para a criação do Base de dados em Sqlite execute o comando.</p>
 

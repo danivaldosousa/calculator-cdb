@@ -68,11 +68,11 @@ e depois
 
     http://localhost.3333/import
 
-## /cdb - Recurso para calculo do CDB.
+## /calculator - Recurso para calculo do CDB.
 
     http://localhost.3333/calculator
 
-## /docs - Recurso para a documentação e teste dos recursos em browse.
+## /api-docs - Recurso para a documentação e teste dos recursos em browse.
 
     http://localhost.3333/api-docs
 
